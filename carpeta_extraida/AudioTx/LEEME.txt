@@ -1,0 +1,15 @@
+AudioTx - transmitir audio del celular al PC con Windows XP
+
+PC (carpeta pc):
+  Compilar recv.c con Dev-C++ usando el compilador de 32 bits (TDM-GCC 4.9.2 32-bit Release).
+  Parametros del linker: -lws2_32 -lwinmm -mwindows -static
+  Al abrir recv.exe, desbloquear en el Firewall de Windows. Muestra la IP y el puerto 5000.
+
+Android (carpeta android):
+  Subir TODO el contenido de la carpeta android a la raiz de un repositorio de GitHub
+  (incluida la carpeta oculta .github). El Action "build" genera app-debug.apk
+  en Actions > build > Artifacts > AudioTx-apk.
+  Instalar el APK en el telefono (permitir apps desconocidas).
+
+Uso: escribir la IP del PC, elegir frecuencia/bits/canales/chunk/prebuffer, Iniciar.
+Valores por defecto: 22050 Hz, 8 bits, estereo, chunk 40 ms, prebuffer 300 ms.
